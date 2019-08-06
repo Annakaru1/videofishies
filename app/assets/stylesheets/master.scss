@@ -10,5 +10,9 @@
 .navbar-inverse a.navbar-brand {
   font-family: "Helvetica Neue", Helvetica;
   font-weight: 100;
-  color: white;
+  color: white !important;
+}
+
+.navbar-toggler {
+  border-color: green;
 }
