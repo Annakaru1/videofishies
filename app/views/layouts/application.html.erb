@@ -20,16 +20,13 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-md-0">
           <li class="nav-item">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
-        </ul>
-      </div>
-    </nav>
 
+        </ul>
         <ul class="navbar-nav">
         <% if user_signed_in? %>
           <li class="nav-item">
-          <%= link_to 'User signed in', user_path(current_user), class: 'nav-link' %>
+          <%= link_to 'My Profile', user_path(current_user), class: 'nav-link' %>
           </li>
           <li class="nav-item">
             <%= link_to 'Sign out', destroy_user_session_path, :method => :delete, class: 'nav-link'%>
