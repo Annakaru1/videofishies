@@ -1,6 +1,6 @@
 class CoursesController < ApplicationController
   def index
-    @courses = Course.new
+    @course = Course.all
   end
 
   def new
@@ -9,7 +9,7 @@ class CoursesController < ApplicationController
 
   def create
     @image = Image.find(params[:image_id])
-    @course.images.create(image_params.merge(user: current_user))
+    @course.image.create(image_params.merge(user: current_user))
     redirect_to image_path(@image)
   end
 
