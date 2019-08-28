@@ -1,10 +1,14 @@
 class CoursesController < ApplicationController
   def index
-    @course = Course.all
+    @courses = Course.all
   end
 
   def new
     @image = Image.new
+  end
+
+  def show
+    @course = Course.find(params[:course_id])
   end
 
   def create
