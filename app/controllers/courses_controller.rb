@@ -4,7 +4,6 @@ class CoursesController < ApplicationController
   end
 
   def new
-    @image = Image.new
   end
 
   def show
@@ -12,9 +11,6 @@ class CoursesController < ApplicationController
   end
 
   def create
-    @image = Image.find(params[:image_id])
-    @course.image.create(image_params.merge(user: current_user))
-    redirect_to image_path(@image)
   end
 
   private
