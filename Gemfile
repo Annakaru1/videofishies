@@ -70,6 +70,7 @@ gem 'carrierwave', '~> 1.3.1'
 gem "figaro"
 gem "mini_magick"
 gem 'carrierwave-aws', '~> 1.0.2 '
+gem 'stripe'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
