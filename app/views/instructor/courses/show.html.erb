@@ -1,4 +1,4 @@
-<script>
+<script>  
   $(function() {
     $('.sections').sortable({
      update: function( event, ui ) {
@@ -58,7 +58,7 @@
         </div>
 
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#newLessonModal" data-lesson-url="<%= instructor_section_lessons_path(section) %>">
+        <button type="button" class="btn btn-primary btn-lg float-right new-lesson-button" data-toggle="modal" data-target="#newLessonModal" data-lesson-url="<%= instructor_section_lessons_path(section) %>">
         New Lesson...
         </button>
 
@@ -67,7 +67,7 @@
 
         <ul class="lessons">
           <% section.lessons.rank(:row_order).each do |lesson| %>
-            <li data-update-url="<%= instructor_lesson_path(lesson) %>">
+            <li data-update-url="<%= instructor_lesson_path (lesson) %>">
               <div class="row">
                 <div class="col-1">
                   <br />
@@ -104,11 +104,7 @@
       </div>
       <%= simple_form_for @section, url: instructor_course_sections_path(current_course) do |f| %>
         <div class="modal-body">
-          <%= f.input :title %>
-        </div>
-          <%= f.submit "Add a section", class: 'btn btn-primary'%>
-          <br />
-          <br />
+          <%= f.input :title %>        
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -118,7 +114,6 @@
     </div>
   </div>
 </div>
-
 
 <!-- Modal -->
 <div class="modal fade" id="newLessonModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">  
